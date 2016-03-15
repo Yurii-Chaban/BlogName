@@ -30,9 +30,13 @@
                         <?php setup_postdata($post); ?>
                         <p class="phone-img"><?php the_post_thumbnail(); ?></p>
                         <div class="contact-page-description">
-                            <h2 class="custom-title"><?php the_title(); ?></h2>
-                            <p class="custom-description"><?php the_content(); ?></p>
+                            <div class="page-content">
+                                <h2 class="contact-title">Conact</h2>
+                                <h3 class="after-title">Morbi accumsan ipsum velit.</h3>
+                                <p class="contact-content">Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                            </div>
                         </div>
+                        <p class="custom-description"><?php the_content(); ?></p>
                     <?php endforeach; ?>
 
                 <?php endwhile ?>

@@ -1,5 +1,6 @@
 <footer class="site-footer">
     <div class="wrapper">
+            <?php my_social_media_icons(); ?>
         <div class="copyright">
             <?php
             if (get_theme_mod('hide_copyright') == '') {
@@ -9,10 +10,7 @@
             <?php }
             ?>
         </div>
-        <div class="social-icons">
-                <?php my_social_media_icons(); ?>
-            </div>
-        </div>
+    </div>
     </div>
 </footer>
 <script type="text/javascript" src="<?php bloginfo( 'template_url' );?>/js/jquery.flexslider.js" ></script>

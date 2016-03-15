@@ -250,7 +250,7 @@ function gootheme_theme_customizer( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'gootheme_logo', array(
-        'default' => get_bloginfo('template_directory') . '/images/default-logo.png',
+        'default' => get_bloginfo('template_directory') . '/images/default-logo1.png',
     ) );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gootheme_logo', array(
 

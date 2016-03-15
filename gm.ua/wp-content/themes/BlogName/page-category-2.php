@@ -23,6 +23,7 @@
         </aside>
         <div class="main-post">
             <div class="gallery-page">
+
                 <?php
                 if (have_posts()):?>
                     <?php while (have_posts()):the_Post(); ?>
@@ -33,6 +34,7 @@
 
                     <?php endwhile ?>
                 <?php endif ?>
+                <ul class="gallery-list">
                 <?php
                 $args = array('post_type' => 'gallery', 'post_per_page' => 20);
                 $the_query = new WP_Query($args);
@@ -40,19 +42,23 @@
                 if ($the_query->have_posts()) :
                     while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                        <ul class="gallery-list">
+
                             <li class="item">
                                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                                <div class="item-content">
-                                    <h3><?php the_title(); ?></h3>
+                                <div class="item-title">
+                                    <h3>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </h3>
                                 </div>
                                 <div class="hover-effect">
                                     <div class="hover-content">
-                                        <h3 class="item-content"><?php the_content(); ?></h3>
+                                        <h3 class="item-content">
+                                            <a href="<?php the_permalink(); ?>"><?php the_content(); ?></a>
+                                        </h3>
                                     </div>
                                 </div>
                             </li>
-                        </ul>
+
 
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
@@ -63,6 +69,7 @@
                 <?php else: ?>
                 <p><?php _e('Sorry, post not found', 'BlogName'); ?>
                     <?php endif; ?>
+                </ul>
             </div>
         </div>
     </div>

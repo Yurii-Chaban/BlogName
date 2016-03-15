@@ -9,7 +9,6 @@
                 if ($example_position != '') {
                     switch ($example_position) {
                         case 'right':
-                            // Do nothing. The theme already aligns the logo to the left
                             break;
                         case 'left':
                             echo '<style type="text/css">';
@@ -44,43 +43,55 @@
                 </div>
             </section>
 
-            <h2 class=""><?php _e('Latest Blog Post', 'BlogName'); ?></h2>
-            <?php if (have_posts()):
-                while (have_posts()): the_post(); ?>
-                    <a class="posted-date" href="<?php the_permalink(); ?>"><?php the_time('j F'); ?></a>
-                    <h2 class="post-title">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h2>
-                    <ul class="post-meta">
-                        <li>
-                            <span class="fa fa-comment"></span>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php global $post;
-                                echo $post->comment_count;
-                                echo " comments"; ?>
+            <div class="post-content">
+                <h2 class="main-post-title"><?php _e('Latest Blog Post', 'BlogName'); ?></h2>
+                <?php if (have_posts()):
+                    while (have_posts()): the_post(); ?>
+                        <div class="content-post">
+                            <a class="posted-date" href="<?php the_permalink(); ?>">
+                            <span class="date">
+                                <span class="date-number"><?php the_time('j'); ?></span>
+                                <span class="date-month"><?php the_time('F'); ?></span>
+                            </span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="<?php the_permalink(); ?>">
-                                <span class="fa fa-folder"></span>
-                                <?php
-                                $category = get_the_category();
-                                echo $category[0]->category_count;
-                                ?>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="post-description"><?php the_excerpt(); ?></p>
-                    <a class="read-more" href="<?php the_permalink(); ?>">
-                        <?php _e('Continue Reading', 'BlogName'); ?>
-                        <span class="fa fa-chevron-right"></span>
-                    </a>
-                <?php endwhile;
-                the_posts_pagination();
+                            <div class="post-description">
+                                <h2 class="post-title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h2>
+                                <ul class="post-meta">
+                                    <li>
+                                        <span class="fa fa-comment"></span>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php global $post;
+                                            echo $post->comment_count;
+                                            echo " comments"; ?>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <span class="fa fa-folder"></span>
+                                            <?php
+                                            $category = get_the_category();
+                                            echo " Category ";
+                                            echo $category[0]->category_count;
+                                            ?>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p><?php the_excerpt(); ?></p>
+                                <a class="read-more" href="<?php the_permalink(); ?>">
+                                    <?php _e('Continue Reading', 'BlogName'); ?>
+                                    <span class="fa fa-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endwhile;
+                    the_posts_pagination();
 
-            else: ?>
-                <p><?php _e('No content found', 'BlogName'); ?></p>
-            <?php endif; ?>
+                else: ?>
+                    <p><?php _e('No content found', 'BlogName'); ?></p>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 

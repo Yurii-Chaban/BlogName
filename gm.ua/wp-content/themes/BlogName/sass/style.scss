@@ -76,6 +76,7 @@ a:visited {
   max-width: 1025px;
   margin: 0 auto;
 }
+
 .main-block {
   padding-top: 20px;
   overflow: hidden;
@@ -84,6 +85,7 @@ a:visited {
   background: url('../images/main-bg.png') repeat-x;
   background-position: top;
 }
+
 .site-header {
   padding-top: 20px;
   background: url('../images/footer-bg.png') no-repeat;
@@ -128,7 +130,7 @@ a:visited {
       padding-left: 7px;
       background: none;
       border: none;
-      border-left: 1px solid  rgba(121, 120, 118, 0.71);
+      border-left: 1px solid rgba(121, 120, 118, 0.71);
       cursor: pointer;
       line-height: 20px;
       text-align: center;
@@ -177,6 +179,7 @@ a:visited {
     }
   }
 }
+
 .sidebar {
   float: right;
   width: 30%;
@@ -198,32 +201,34 @@ a:visited {
     ul {
 
       .cat-item {
-      display: block;
-      margin: 10px 0;
-      padding: 10px;
-      text-align: right;
-      background: #454545;
-      @include transition;
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: right;
+        background: #454545;
+        @include transition;
 
-      &:hover {
-        background: #ffd500;
+        &:hover {
+          background: #ffd500;
+
+          a {
+            color: #222;
+          }
+        }
 
         a {
-          color: #222;
+          float: left;
+          width: 90%;
+          height: 100%;
+          color: #b6b6b6;
+          text-align: left;
+          font-family: 'Arial', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+
         }
       }
-
-      a {
-        float: left;
-        color: #b6b6b6;
-        font-family: 'Arial', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-
-      }
     }
-  }
-
 
     .textwidget {
       .popular-item {
@@ -343,7 +348,6 @@ a:visited {
       margin-right: 20px;
       background: #c3c3c3;
 
-
       .date {
         display: block;
         width: 65px;
@@ -359,18 +363,18 @@ a:visited {
           font-weight: 700;
           text-transform: uppercase;
         }
-      .date-month {
-        color: #000;
-        font-size: 14px;
-        font-weight: 300;
-        text-transform: uppercase;
-      }
+        .date-month {
+          color: #000;
+          font-size: 14px;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
       }
     }
-  .content-post {
-    margin: 0 0 55px 0;
-    border-bottom: 5px solid #e7e7e7;
-  }
+    .content-post {
+      margin: 0 0 55px 0;
+      border-bottom: 5px solid #e7e7e7;
+    }
     .post-description {
       overflow: hidden;
 
@@ -380,7 +384,7 @@ a:visited {
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
-        a{
+        a {
           color: #222;
         }
       }
@@ -397,11 +401,11 @@ a:visited {
             padding-right: 10px;
             color: #a09e9e;
           }
-          
+
           a {
             color: #5e5e5e;
             @include transition;
-            
+
             &:hover {
               color: #000;
             }
@@ -454,27 +458,26 @@ a:visited {
       .nav-links {
         float: right;
 
-      .page-numbers {
-        display: inline-block;
-        padding: 5px 10px;
-        color: #222;
-        font-family: 'Arial', sans-serif;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 24px;
-        background: #e2e2e2;
-        @include transition;
+        .page-numbers {
+          display: inline-block;
+          padding: 5px 10px;
+          color: #222;
+          font-family: 'Arial', sans-serif;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 24px;
+          background: #e2e2e2;
+          @include transition;
 
-        &:hover {
-          color: #fff;
-          background: #222;
+          &:hover {
+            color: #fff;
+            background: #222;
+          }
         }
-      }
       }
     }
   }
 }
-
 
 .banner-img {
   width: 100%;
@@ -482,12 +485,14 @@ a:visited {
   height: 100%;
   max-height: 250px;
 }
+
 /*slider*/
-.featured-post{
+.featured-post {
   position: relative;
   z-index: 1;
   font-family: 'open sans', sans-serif;
 }
+
 .featured-post {
   .caption {
     position: absolute;
@@ -495,7 +500,7 @@ a:visited {
     border-radius: 15px;
     top: 15px;
     right: 15px;
-    padding:10px;
+    padding: 10px;
     color: #fff;
     width: 90%;
     background: #000;
@@ -505,6 +510,7 @@ a:visited {
     z-index: 2;
   }
 }
+
 .slider-wrapper {
   margin: 0;
   padding: 7px 5px;
@@ -513,6 +519,7 @@ a:visited {
   .slides {
   }
 }
+
 .caption {
   padding: 10px 15px;
   background: #222;
@@ -538,6 +545,7 @@ a:visited {
 .featured-post a:visited {
   color: #fff;
 }
+
 .featured-post .btn {
   text-align: center;
   text-decoration: none;
@@ -547,17 +555,19 @@ a:visited {
   right: 10px;
   padding: 10px;
 }
+
 @media only screen and (max-width: 767px) {
   .featured-post .caption {
     width: 95%;
     opacity: .70;
 
   }
-  .featured-post p{
+  .featured-post p {
     font-size: 75%;
   }
 }
-@media only screen and (max-width: 650px){
+
+@media only screen and (max-width: 650px) {
   .featured-post p {
     display: none;
   }
@@ -612,18 +622,19 @@ a:visited {
     width: 100%;
     height: 97%;
     background: black;
-    background-color: rgba(34,34,34, 0.8); ;
+    background-color: rgba(34, 34, 34, 0.8);;
     color: #fff;
     opacity: 0;
     -webkit-transition: all 0.6s ease;
-    -moz-transition:    all 0.6s ease;
-    -o-transition:      all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
 
     &:hover {
       opacity: 1;
     }
     &:before {
-      bottom: 0; left: 0;
+      bottom: 0;
+      left: 0;
     }
   }
   .hover-content {
@@ -647,6 +658,7 @@ a:visited {
     }
   }
 }
+
 /*_________________________________________*/
 /*pade Contact*/
 .main-post {
@@ -663,7 +675,7 @@ a:visited {
   }
 
   .contact-title {
-    margin: 130px 0 20px 0;
+    margin: 110px 0 20px 0;
     color: #272726;
     font-size: 36px;
     font-weight: 700;
@@ -671,7 +683,7 @@ a:visited {
     text-transform: uppercase;
   }
   .after-title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-family: 'Arial', sans-serif;
     font-size: 14px;
     color: #040303;
@@ -679,7 +691,7 @@ a:visited {
     line-height: 24px;
   }
   .contact-content {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     font-family: 'Arial', sans-serif;
     color: #878585;
     font-weight: 400;
@@ -711,6 +723,7 @@ a:visited {
 
     .wpcf7-textarea {
       width: 100%;
+      height: 108px;
       padding: 10px 0 0 10px;
       background-color: #e2e2e2;
       border: 1px solid #b7b7b7;
@@ -722,16 +735,14 @@ a:visited {
       width: 110px;
       height: 35px;
       margin-top: 15px;
+      color: #2c2c2b;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 35px;
+      text-align: left;
+      text-transform: uppercase;
       cursor: pointer;
       background-color: #ffd500;
-
-      &:after {
-        position: absolute;
-        right: 0;
-        top: 0;
-        content: '&#xf105;';
-        font-family: 'FontAwesome';
-      }
     }
   }
 }

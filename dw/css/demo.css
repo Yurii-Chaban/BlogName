@@ -1,0 +1,29 @@
+body {
+    font: 15px/1.5 verdana, arial, helvetica, sans-serif;
+}
+p {
+    max-width: 60em;
+}
+p.end {
+    margin-top: 2em;
+}
+h1 {
+    font-size:1.3em;
+    margin: 1em 0 1.4em;
+}
+h2 {
+    font-size: 1.2em;
+    margin: 1.2em 0 .8em;
+}
+a:link {
+    color:#33c;
+}
+a:visited {
+    color:#339;
+}
+ul {
+    margin:1.4em 0 2em;
+}
+ul li {
+    margin-bottom:.8em;
+}

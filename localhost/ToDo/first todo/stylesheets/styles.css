@@ -1,0 +1,191 @@
+/* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../sass/styles.scss */
+body {
+  font: 14px/1.5em "Montserrat", sans-serif;
+  background: #F0F1FA;
+}
+
+/* line 10, ../sass/styles.scss */
+.tasker ul, .tasker li,
+.tasker .error,
+.tasker button,
+.tasker input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* line 18, ../sass/styles.scss */
+.tasker-header button, .tasker-body .task button {
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+/* line 22, ../sass/styles.scss */
+.tasker {
+  max-width: 400px;
+  margin: 100px auto 0;
+}
+/* line 25, ../sass/styles.scss */
+.tasker .error {
+  display: none;
+  background: rgba(237, 28, 36, 0.7);
+  color: #fff;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+/* line 36, ../sass/styles.scss */
+.tasker ul {
+  background: #fff;
+}
+/* line 41, ../sass/styles.scss */
+.tasker li,
+.tasker .error,
+.tasker button,
+.tasker input {
+  font: 18px/1.25em Helvetica, Arial, Sans-serif;
+}
+
+/* line 50, ../sass/styles.scss */
+.tasker-header {
+  display: inline-flex;
+  background: #313e50;
+  justify-content: space-between;
+  width: 100%;
+}
+/* line 55, ../sass/styles.scss */
+.tasker-header input,
+.tasker-header button {
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  padding: 14px;
+}
+/* line 63, ../sass/styles.scss */
+.tasker-header input {
+  flex-grow: 2;
+}
+/* line 67, ../sass/styles.scss */
+.tasker-header button {
+  cursor: pointer;
+  background: #1dd2af;
+  border-left: 1px solid #1dd2af;
+}
+/* line 72, ../sass/styles.scss */
+.tasker-header button:hover {
+  background: #1dd2af;
+}
+
+/* line 79, ../sass/styles.scss */
+.tasker-body .task {
+  display: block;
+  position: relative;
+  padding: 14px 40px 14px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 85, ../sass/styles.scss */
+.tasker-body .task li {
+  display: block;
+  position: relative;
+  padding: 14px 40px 14px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 91, ../sass/styles.scss */
+.tasker-body .task:last-child {
+  border-bottom: none;
+}
+/* line 95, ../sass/styles.scss */
+.tasker-body .task:hover > button {
+  opacity: 1;
+}
+/* line 99, ../sass/styles.scss */
+.tasker-body .task.completed {
+  color: #EDEFF1;
+  text-decoration: line-through;
+}
+/* line 104, ../sass/styles.scss */
+.tasker-body .task input {
+  margin-right: 10px;
+}
+/* line 108, ../sass/styles.scss */
+.tasker-body .task button {
+  color: #EDEFF1;
+  margin: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+/* line 116, ../sass/styles.scss */
+.tasker-body .task button:hover {
+  color: #ed1c24;
+}

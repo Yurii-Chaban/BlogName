@@ -1,0 +1,85 @@
+body {
+	background: #eceff0;
+}
+
+body,
+input {
+	font: 1em "Open Sans", sans-serif;
+	color: #363639;
+}
+
+a {
+	text-decoration: none;
+	border: 1px solid #363639;
+}
+
+/*List*/
+.list {
+	background:  #fff;
+	margin: 20px auto;
+	width:  100%;
+	max-width: 500px;
+	padding: 20px;
+	border-radius: 2px;
+	box-shadow: 3px 3px 0 rgb(0, 0, 0, .1);
+	box-sizing: border-box;
+}
+
+.list .header {
+	font-family: "Shadow Intro Lighf Two", cursive;
+	margin: 0 0 10px 0;
+}
+
+/*Items*/
+.items {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+
+.items li:hover .done-button {
+	opacity: 1;
+}
+
+.items .item.done {
+	text-decoration: line-through;
+	opacity: 0.3;
+}
+
+.items li,
+.item-add .input {
+	border: none;
+	border-bottom: 1px dashed #ccc;
+	padding: 15px 0;
+}
+
+.input {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.input:focus {
+	outline: none;
+}
+
+/*Done button*/
+.done-button {
+	display: inline-block;
+	font-size: 0.8em;
+	background: #d9dfe1;
+	border: none;
+	color: #363639;
+	padding: 3px 6px;
+	opacity: 0.4;
+	transition: ease-in-out 0.3s;
+}
+/*Submit button*/
+
+.subbmit {
+	width: 100%;
+	margin-top: 10px;
+	background: #fff;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	box-shadow: 3px 3px 0 #ddd;
+}

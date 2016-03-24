@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Demo</title>
+<link rel="stylesheet" href="../css/demo.css" type="text/css" />
+<script type="text/javascript">
+
+var obj = {
+    min: 2,
+    max: 1000,
+    bool: true,
+    o: null,
+    val: undefined,
+    re: /^\d+$/,
+    fn: function(val) {
+        // code here
+    },
+    m: this.fn,
+    // example toJSON method
+    toJSON: function(nm) { // arg: object name
+        //alert(nm); obj
+        var o = {};
+        for ( var prop in this ) {
+            // convert RegExp to string
+            if ( this[prop] && this[prop].constructor == RegExp ) {
+                o[prop] = this[prop].toString();
+            } else if ( prop == 'm' ) { // function pointer
+                o[prop] = 'fn'; // would be removed by stringify otherwise
+            } else if ( typeof this[prop] === 'undefined' ) {
+                o[prop] = 'undefined'; // would be removed by stringify otherwise
+            } else if ( prop === 'bool' ) {
+                continue; // don't send to stringify
+            } else {
+                o[prop] = this[prop];
+            }
+        }
+        return o; // passed to stringify
+    }
+}
+
+// passing filter array and indent to stringify
+var json = JSON.stringify(obj, ['min', 'max', 're', 'm'], 4);
+console.log(json);
+</script>
+</head>
+<body>
+
+<h1>JSON.stringify Example with toJSON and Filter Array</h1>
+
+<p>View the source code of this page to see the JavaScript. Hit F12 and reload the page to view the result in the console of any modern browser.</p>
+
+<p class="end"><a href="../">Back to Index</a></p>
+
+</body>
+</html>
